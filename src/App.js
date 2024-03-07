@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // page
 import Lelang from "./page/lelang";
 import DetailLelang from "./page/detail_lelang";
+import NewFooter from "./page/footer";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route path="/" element={<Lelang />} />
         <Route path="/Detail" element={<DetailLelang />} />
       </Routes>
-      <h1>hellow world</h1>
+      <NewFooter />
     </div>
   );
 }

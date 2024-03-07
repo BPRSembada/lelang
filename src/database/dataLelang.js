@@ -51,8 +51,8 @@ export const dataLelang = [
     akses_lokasi: "-",
     tipe: "Tanah dan Bangunan",
     transaksi: "Jual",
-    LT: "84 M2",
-    LB: "214 M2",
+    LT: "89 M2",
+    LB: "192 M2",
     KT: "3",
     KM: "2",
     Harga: 1100000000,
@@ -66,9 +66,9 @@ export const dataLelang = [
     images: [
       "./tangguhdwih/tampak_depan.jpg",
       "./tangguhdwih/tampak_depan2.jpg",
-      "./tangguhdwih/teras_depan.jpeg",
+      "./tangguhdwih/teras_depan.jpg",
       "./tangguhdwih/r_tamu.jpg",
-      "./tangguhdwih/kamarTidur.jpg",
+      "./tangguhdwih/kamarTidur2.jpg",
       "./tangguhdwih/atap.jpg",
     ],
     desImages: [

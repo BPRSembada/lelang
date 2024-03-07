@@ -14,12 +14,15 @@
 }
 .detail-properti {
   margin-block: 2rem;
-  border-top: 3px solid red;
-  border-bottom: 3px solid red;
+  border-top: 3px solid #b50b0b;
+  border-bottom: 3px solid #b50b0b;
+}
+.detail-properti p {
+  font-weight: 600;
 }
 .carousel-control-prev .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: red;
+  background-color: #b50b0b;
   border-radius: 0.3rem;
 }
 /* 
@@ -45,12 +48,12 @@ container contact
 -----------------
 */
 .cont-utama-contact {
-  border: 3px solid red;
+  border: 3px solid #b50b0b;
   border-radius: 1rem;
   overflow: hidden;
 }
 .info-hubungi {
-  background-color: red;
+  background-color: #b50b0b;
   text-align: center;
   margin-bottom: 3rem;
   padding-block: 0.3rem;

@@ -14,18 +14,16 @@ const Lelang = () => {
         <h1>BANK SEMBADA</h1>
       </section>
       <section className="searching">
-        <div>
-          <InputGroup className="mb-3">
-            <Form.Control
-              placeholder="Search"
-              aria-label="Recipient's username"
-              aria-describedby="basic-addon2"
-            />
-            <InputGroup.Text id="basic-addon2">
-              <VscSearch />
-            </InputGroup.Text>
-          </InputGroup>
-        </div>
+        <InputGroup>
+          <Form.Control
+            placeholder="Search"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <InputGroup.Text id="basic-addon2">
+            <VscSearch />
+          </InputGroup.Text>
+        </InputGroup>
       </section>
       <section className="cont_cart_lelang">
         {dataLelang.map((item, index) => {
@@ -44,24 +42,24 @@ const Lelang = () => {
                 </div>
                 <div>
                   <div className="cont-contact">
-                    <img
-                      src="https://img.freepik.com/free-photo/close-up-shot-happy-delighted-charming-young-bearded-man-with-moustache-glasses-black-trendy-beanie-smiling-joyfully-laughing-feeling-satisfied-lucky_176420-23530.jpg?size=626&ext=jpg&ga=GA1.1.1447989256.1686109015&semt=ais"
-                      alt=""
-                    />
+                    <img src="./assets/jill.jpg" alt="Jill" />
                     <div>
-                      <h2>contact person</h2>
-                      <p>jabatan</p>
+                      <h2>Jill Michael W.</h2>
+                      <p>Bank Sembada</p>
                     </div>
                   </div>
                   <div className="cont-button-cart">
                     <Button
                       variant="warning"
+                      className="helo"
                       as={Link}
                       to={`/Detail?${item.id}`}
                     >
                       Lihat Detail
                     </Button>
-                    <Button variant="warning">Whatsapp</Button>
+                    <Button variant="warning" className="helo">
+                      Whatsapp
+                    </Button>
                   </div>
                 </div>
               </div>

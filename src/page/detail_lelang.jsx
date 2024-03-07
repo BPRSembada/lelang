@@ -8,8 +8,8 @@ const DetailLelang = () => {
   let idLelang = +document.location.search.substring(1);
   console.log(idLelang);
   let detailData = dataLelang.filter((item) => item.id === idLelang);
-  console.log(detailData);
-  console.log(detailData[0].images);
+  // console.log(detailData);
+  // console.log(detailData[0].images);
   return (
     <div className="main_lelang">
       <section className="img_detail_lelang">
@@ -19,7 +19,7 @@ const DetailLelang = () => {
               <Carousel.Item key={index}>
                 <img src={item} alt="" />
                 <Carousel.Caption>
-                  <h3>{dataLelang[0].desImages[index]}</h3>
+                  <h3>{detailData[0].desImages[index]}</h3>
                 </Carousel.Caption>
               </Carousel.Item>
             );
@@ -28,14 +28,14 @@ const DetailLelang = () => {
       </section>
       <section>
         <div>
-          <h1>Rp. {dataLelang[0].Harga.toLocaleString()}</h1>
-          <h2>{dataLelang[0].judul}</h2>
-          <h4>{dataLelang[0].alamat_singkat}</h4>
+          <h1>Rp. {detailData[0].Harga.toLocaleString()}</h1>
+          <h2>{detailData[0].judul}</h2>
+          <h4>{detailData[0].alamat_singkat}</h4>
           <div className="ket_lelang">
-            <p>LT : {dataLelang[0].LT}</p>
-            <p>LB : {dataLelang[0].LB}</p>
-            <p>KT : {dataLelang[0].KT}</p>
-            <p>KM : {dataLelang[0].KM}</p>
+            <p>LT : {detailData[0].LT}</p>
+            <p>LB : {detailData[0].LB}</p>
+            <p>KT : {detailData[0].KT}</p>
+            <p>KM : {detailData[0].KM}</p>
           </div>
         </div>
       </section>
@@ -44,11 +44,11 @@ const DetailLelang = () => {
         <p>Alamat : {detailData[0].alamat}</p>
         <p>Lokasi : {detailData[0].akses_lokasi}</p>
         <p>Tipe : {detailData[0].tipe}</p>
-        <p>Transaksi : {dataLelang[0].transaksi}</p>
-        <p>Luas Bangunan : {dataLelang[0].LB}</p>
-        <p>Luas Tanah : {dataLelang[0].LT}</p>
+        <p>Transaksi : {detailData[0].transaksi}</p>
+        <p>Luas Bangunan : {detailData[0].LB}</p>
+        <p>Luas Tanah : {detailData[0].LT}</p>
         <p>Listrik : </p>
-        <p>Sertifikat : {dataLelang[0].statusAset}</p>
+        <p>Sertifikat : {detailData[0].statusAset}</p>
         <p>Furnish : </p>
         <p>Material Lantai : </p>
         <p>Material bangunan :</p>
@@ -57,10 +57,8 @@ const DetailLelang = () => {
       <section>
         <h2>Simulasi Cicilan KPR</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-          itaque consequatur ratione minus officia accusantium at recusandae
-          aliquid, sunt tenetur aperiam suscipit, dolore obcaecati nisi
-          reiciendis repellat non enim rerum?
+          Anda dapat mengajukan KPR di Bank Sembada dengan penawaran yang
+          menarik.
         </p>
         <div>
           <div className="item-kpr">
@@ -130,6 +128,11 @@ const DetailLelang = () => {
             </div>
           </div>
         </div>
+        <p>
+          Kalkulator ini dirancang sebagai simulasi KPR dengan nilai pendekatan,
+          suku bunga dapat berubah sesuai dengan ketetapan Bank, untuk
+          mendapatkan informasi lebih lanjut silahkan hubungi petugas bank kami
+        </p>
       </section>
       <section className="cont-utama-contact">
         <div className="info-hubungi">
@@ -137,26 +140,20 @@ const DetailLelang = () => {
         </div>
         <div className="cont-contact-detail">
           <div className="cont-contact">
-            <img
-              src="https://img.freepik.com/free-photo/close-up-shot-happy-delighted-charming-young-bearded-man-with-moustache-glasses-black-trendy-beanie-smiling-joyfully-laughing-feeling-satisfied-lucky_176420-23530.jpg?size=626&ext=jpg&ga=GA1.1.1447989256.1686109015&semt=ais"
-              alt=""
-            />
+            <img src="./assets/jill.jpg" alt="" />
             <div>
-              <h3>nama marketing</h3>
-              <p>jabatan</p>
+              <h3>Jill Michael W.</h3>
+              <p>Bank Sembada</p>
             </div>
             <div>
               <Button variant="danger">Whatsapp</Button>
             </div>
           </div>
           <div className="cont-contact">
-            <img
-              src="https://img.freepik.com/free-photo/close-up-shot-happy-delighted-charming-young-bearded-man-with-moustache-glasses-black-trendy-beanie-smiling-joyfully-laughing-feeling-satisfied-lucky_176420-23530.jpg?size=626&ext=jpg&ga=GA1.1.1447989256.1686109015&semt=ais"
-              alt=""
-            />
+            <img src="./assets/beni.jpg" alt="" />
             <div>
-              <h3>nama marketing</h3>
-              <p>jabatan</p>
+              <h3>Beni Wijaya</h3>
+              <p>Bank Sembada</p>
             </div>
             <div>
               <Button variant="danger">Whatsapp</Button>
