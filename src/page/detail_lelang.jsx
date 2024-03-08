@@ -26,7 +26,7 @@ const DetailLelang = () => {
           })}
         </Carousel>
       </section>
-      <section>
+      <section className="des-detail-lelang">
         <div>
           <h1>Rp. {detailData[0].Harga.toLocaleString()}</h1>
           <h2>{detailData[0].judul}</h2>
@@ -41,20 +41,69 @@ const DetailLelang = () => {
       </section>
       <section className="detail-properti">
         <h2>Detail Properti</h2>
-        <p>Alamat : {detailData[0].alamat}</p>
-        <p>Lokasi : {detailData[0].akses_lokasi}</p>
-        <p>Tipe : {detailData[0].tipe}</p>
-        <p>Transaksi : {detailData[0].transaksi}</p>
-        <p>Luas Bangunan : {detailData[0].LB}</p>
-        <p>Luas Tanah : {detailData[0].LT}</p>
-        <p>Listrik : </p>
-        <p>Sertifikat : {detailData[0].statusAset}</p>
-        <p>Furnish : </p>
-        <p>Material Lantai : </p>
-        <p>Material bangunan :</p>
-        <p>Hadap :</p>
+        <div className="detail-item">
+          <p>Alamat</p>
+          <p>:</p>
+          <p>{detailData[0].alamat}</p>
+        </div>
+
+        <div className="detail-item">
+          <p>Lokasi </p>
+          <p>:</p>
+          <p>{detailData[0].akses_lokasi}</p>
+        </div>
+        <div className="detail-item">
+          <p>Tipe </p>
+          <p>:</p>
+          <p>{detailData[0].tipe}</p>
+        </div>
+        <div className="detail-item">
+          <p>Transaksi </p>
+          <p>:</p>
+          <p>{detailData[0].transaksi}</p>
+        </div>
+        <div className="detail-item">
+          <p>Luas Bangunan </p>
+          <p>:</p>
+          <p>{detailData[0].LB}</p>
+        </div>
+        <div className="detail-item">
+          <p>Luas Tanah </p>
+          <p>:</p>
+          <p>{detailData[0].LT}</p>
+        </div>
+        <div className="detail-item">
+          <p>Listrik </p>
+          <p>:</p>
+          <p></p>
+        </div>
+        <div className="detail-item">
+          <p>Sertifikat </p>
+          <p>:</p>
+          <p>{detailData[0].statusAset}</p>
+        </div>
+        <div className="detail-item">
+          <p>Furnish </p>
+          <p>:</p>
+          <p></p>
+        </div>
+        <div className="detail-item">
+          <p>Material Lantai</p>
+          <p>:</p>
+          <p></p>
+        </div>
+        <div className="detail-item">
+          <p>Material bangunan</p>
+          <p>:</p>
+          <p></p>
+        </div>
+        <div className="detail-item">
+          <p>Hadap</p>
+          <p>:</p>
+          <p></p>
+        </div>
       </section>
-      <section>
+      <section className="kpr-lelang">
         <h2>Simulasi Cicilan KPR</h2>
         <p>
           Anda dapat mengajukan KPR di Bank Sembada dengan penawaran yang
@@ -160,7 +209,6 @@ const DetailLelang = () => {
             </div>
           </div>
         </div>
-        {/* <img src="./tangguhdwih/atap.jpg" alt="" className="img-coba" /> */}
       </section>
     </div>
   );

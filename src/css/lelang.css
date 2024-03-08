@@ -103,6 +103,100 @@ cart lelang
   gap: 1rem;
 }
 
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .main_lelang {
+    padding-inline: 0rem;
+  }
+  .cont_cart_lelang {
+    margin-inline: 2rem;
+    gap: 1rem;
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .main_lelang {
+    padding-inline: 0rem;
+  }
+  .hero_lelang {
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #b50b0b;
+  }
+  .hero_lelang h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .hero_lelang img {
+    width: 15rem;
+  }
+  .searching {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    /* background-color: aquamarine; */
+  }
+  .cont_cart_lelang {
+    /* flex-direction: column; */
+    gap: 1rem;
+    padding-inline: 1rem;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
+  /* 
+  -------------
+  cart lelang 
+  -------------
+  */
+
+  .cart_lelang {
+    max-width: 20rem;
+  }
+  .cont-des-cart {
+    padding-inline: 0.5rem;
+  }
+  .cont-des-cart h1 {
+    font-size: 1.2rem;
+  }
+  .cont-des-cart h2 {
+    font-size: 1rem;
+  }
+  .cont-des-cart h3 {
+    font-size: 0.6rem;
+  }
+  .cont-des-cart h4 {
+    font-size: 0.8rem;
+  }
+  .ket_lelang {
+    gap: 0.5rem;
+  }
+
+  .ket_lelang p {
+    font-size: 0.6rem;
+    padding: 0.2rem;
+  }
+  /* 
+  ------------
+  contact
+  ------------
+  */
+  .cont-contact img {
+    width: 3rem;
+    height: auto;
+  }
+  .cont-contact h2 {
+    font-size: 1rem;
+  }
+  .cont-contact p {
+    font-size: 0.6rem;
+  }
+  .cont-button-cart Button,
+  Button {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .main_lelang {
     padding-inline: 0rem;
@@ -163,8 +257,10 @@ cart lelang
   .ket_lelang {
     gap: 0.5rem;
   }
+
   .ket_lelang p {
     font-size: 0.6rem;
+    padding: 0.2rem;
   }
   /* 
   ------------
