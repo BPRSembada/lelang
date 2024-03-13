@@ -13,6 +13,7 @@ const Lelang = () => {
         <h1>KATALOG JUAL DAN LELANG PROPERTI JAMINAN</h1>
         <h1>BANK SEMBADA</h1>
       </section>
+
       <section className="searching">
         <InputGroup>
           <Form.Control
