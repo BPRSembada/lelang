@@ -116,7 +116,7 @@ const DetailLelang = () => {
               <h5>Harga</h5>
             </div>
             <div>
-              <p>Rp {detailData[0].Harga.toLocaleString()}</p>
+              <p>: Rp {detailData[0].Harga.toLocaleString()}</p>
             </div>
           </div>
           <div className="item-kpr">
@@ -173,7 +173,7 @@ const DetailLelang = () => {
               <h5>Jumalah Angsuran</h5>
             </div>
             <div>
-              <p>Rp 4,5 M/bulan</p>
+              <p>: Rp 4,5 M/bulan</p>
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ const DetailLelang = () => {
           <div className="cont-contact">
             <img src="./assets/jill.jpg" alt="" />
             <div>
-              <h3>Jill Michael W.</h3>
+              <h2>Jill Michel W.</h2>
               <p>Bank Sembada</p>
             </div>
             <div>
@@ -201,7 +201,7 @@ const DetailLelang = () => {
           <div className="cont-contact">
             <img src="./assets/beni.jpg" alt="" />
             <div>
-              <h3>Beni Wijaya</h3>
+              <h2>Beni Wijaya</h2>
               <p>Bank Sembada</p>
             </div>
             <div>

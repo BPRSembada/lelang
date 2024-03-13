@@ -40,6 +40,7 @@ cart lelang
 .cont_cart_lelang {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   /* background-color: blue; */
 }
 .cart_lelang {

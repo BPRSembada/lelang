@@ -44,7 +44,7 @@ const Lelang = () => {
                   <div className="cont-contact">
                     <img src="./assets/jill.jpg" alt="Jill" />
                     <div>
-                      <h2>Jill Michael W.</h2>
+                      <h2>Jill Michel W.</h2>
                       <p>Bank Sembada</p>
                     </div>
                   </div>
