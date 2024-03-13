@@ -1,6 +1,7 @@
 .main_lelang {
   padding-inline: 15rem;
 }
+
 .hero_lelang {
   background-image: url("/public/assets/cover.jpg");
   background-size: cover;
@@ -42,6 +43,7 @@ cart lelang
   justify-content: space-between;
   flex-wrap: wrap;
   /* background-color: blue; */
+  flex-wrap: wrap;
 }
 .cart_lelang {
   border-radius: 0.5rem;
@@ -51,7 +53,7 @@ cart lelang
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .cart_lelang img {
-  width: 100%;
+  width: 25rem;
 }
 .cont-des-cart {
   padding: 1rem;
