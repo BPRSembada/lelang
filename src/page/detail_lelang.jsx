@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "../css/detail_lelang.css";
 import { Button, InputGroup, Form } from "react-bootstrap";
@@ -6,10 +6,60 @@ import { dataLelang } from "../database/dataLelang";
 
 const DetailLelang = () => {
   let idLelang = +document.location.search.substring(1);
-  console.log(idLelang);
+  // console.log(idLelang);
   let detailData = dataLelang.filter((item) => item.id === idLelang);
   // console.log(detailData);
   // console.log(detailData[0].images);
+  const [dP, SetDP] = useState(0);
+  const [dpnumber, setDpNumber] = useState(0);
+  const [bunga, setBunga] = useState(0);
+  const [tenor, setTenor] = useState(0);
+  const [cicilan, setCicilan] = useState(0);
+  const setValue = () => {
+    let DP = (detailData[0].Harga * 20) / 100;
+    SetDP(DP.toLocaleString());
+    setDpNumber(DP);
+    console.log(detailData[0].Harga);
+  };
+  const Bunga = (e) => {
+    let valueBunga = e.target.value;
+    if (valueBunga === "0") {
+      setBunga(0);
+    } else if (valueBunga === "18") {
+      setBunga(18);
+    }
+  };
+
+  const Tenor = (e) => {
+    let valueTenor = e.target.value;
+    if (valueTenor === "0") {
+      setTenor(0);
+    } else if (valueTenor === "10") {
+      setTenor(10);
+    } else if (valueTenor === "15") {
+      setTenor(15);
+    }
+  };
+  const calculatorLelang = () => {
+    let jumlahPinjaman = detailData[0].Harga - dpnumber;
+    // Menghitung bunga bulanan
+    let bungaBulanan = bunga / 100 / 12;
+
+    // Menghitung jumlah bulan
+    let jumlahBulan = tenor * 12;
+
+    // Menghitung cicilan bulanan
+    let cicilanBulanan =
+      (jumlahPinjaman * bungaBulanan) /
+      (1 - Math.pow(1 + bungaBulanan, -jumlahBulan));
+
+    setCicilan(Math.ceil(cicilanBulanan));
+  };
+  useEffect(() => {
+    console.log(cicilan);
+    calculatorLelang();
+    setValue();
+  }, []);
   return (
     <div className="main_lelang">
       <section className="img_detail_lelang">
@@ -121,7 +171,6 @@ const DetailLelang = () => {
           </div>
           <div className="item-kpr">
             <div>
-              {" "}
               <h5>Uang Muka</h5>{" "}
             </div>
             <div>
@@ -131,24 +180,25 @@ const DetailLelang = () => {
                   placeholder="Search"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
+                  value={dP}
                 />
               </InputGroup>
             </div>
           </div>
           <div className="item-kpr">
             <div>
-              {" "}
               <h5>Jangka Waktu</h5>{" "}
             </div>
             <div>
-              <InputGroup className="mb-3">
-                <Form.Control
-                  placeholder="Search"
-                  aria-label="Recipient's username"
-                  aria-describedby="basic-addon2"
-                />
-                <InputGroup.Text id="basic-addon2">tahun</InputGroup.Text>
-              </InputGroup>
+              <Form.Select
+                aria-label="Default select example"
+                className="mb-3"
+                onChange={(e) => Tenor(e)}
+              >
+                <option value="0">Pilih jakwa waktu</option>
+                <option value="10">10 tahun</option>
+                <option value="15">15 tahun</option>
+              </Form.Select>
             </div>
           </div>
           <div className="item-kpr">
@@ -157,14 +207,14 @@ const DetailLelang = () => {
               <h5>Suku Bunga</h5>{" "}
             </div>
             <div>
-              <InputGroup className="mb-3">
-                <Form.Control
-                  placeholder="Search"
-                  aria-label="Recipient's username"
-                  aria-describedby="basic-addon2"
-                />
-                <InputGroup.Text id="basic-addon2">%</InputGroup.Text>
-              </InputGroup>
+              <Form.Select
+                aria-label="Default select example"
+                className="mb-3"
+                onChange={(e) => Bunga(e)}
+              >
+                <option value="0">Pilih Suku Bunga</option>
+                <option value="18">18%</option>
+              </Form.Select>
             </div>
           </div>
           <div className="item-kpr">
@@ -173,8 +223,9 @@ const DetailLelang = () => {
               <h5>Jumalah Angsuran</h5>
             </div>
             <div>
-              <p>: Rp 4,5 M/bulan</p>
+              <p>: Rp {cicilan.toLocaleString()} /bulan</p>
             </div>
+            {/* <button onClick={() => calculatorLelang()}>clik</button> */}
           </div>
         </div>
         <p>

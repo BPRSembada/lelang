@@ -137,9 +137,9 @@ container contact
   .detail-item :nth-child(3) {
     flex-basis: 76%;
   }
-  .cont-contact-detail {
-    /* flex-direction: column; */
-  }
+  /* .cont-contact-detail {
+    flex-direction: column;
+  } */
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .img_detail_lelang {
@@ -179,7 +179,7 @@ container contact
     flex-basis: 76%;
   }
   .cont-contact-detail {
-    /* flex-direction: column; */
+    flex-direction: column;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
@@ -219,9 +219,9 @@ container contact
   .detail-item :nth-child(3) {
     flex-basis: 76%;
   }
-  .cont-contact-detail {
+  /* .cont-contact-detail {
     flex-direction: column;
-  }
+  } */
 }
 @media (min-width: 360px) and (max-width: 479px) {
   .img_detail_lelang {
